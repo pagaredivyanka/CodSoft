@@ -1,0 +1,201 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: "Popins", sans-serif;
+
+}
+
+body{
+    background-color: #3f4249;
+    color: #f4f4f4;
+
+}
+
+.page{
+    width: 100%;
+    height: 100%;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 1rem 3rem;
+    z-index: 2;
+}
+
+.logo{
+    font-family: "Fascinate", cursive;
+    font-size: 2rem;
+    font-weight: 800;
+    color: #f4f4f4;
+
+}
+
+.social-media{
+    display: flex;
+    width: 130px;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.social-media > a {
+    text-decoration: none;
+    color: #3f4249;
+    font-size: 1.2rem;
+    transition: 0.2s ease;    
+}
+
+.social-media > a:hover {
+    transform: scale(1.1);
+    color: #24adea;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    height: 100%;
+
+}
+
+.left-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5rem 3rem 2rem 3rem;
+
+}
+
+.left-wrapper >h1 {
+    font-size: 3.5rem;
+    line-height: 1;
+    letter-spacing: 5;
+    margin-bottom: 30px;
+
+}
+
+.left-wrapper > h1 > span {
+    color: #24adea;
+
+}
+
+.left-wrapper > p {
+    font-size: 1.1rem;
+    line-height: 1.5;
+
+}
+
+.input-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    background: #24adea;
+    border-radius: 50px;
+
+}
+
+.input-wrapper > input {
+    border: none;
+    padding-left: 2rem;
+    width: 100%;
+    background-color: transparent;
+    caret-color: #21252b;
+}
+
+.input-wrapper > input::placeholder {
+    color: #f4f4f4;
+}
+
+.input-wrapper > button {
+    padding: 0.5rem 1rem;
+    width: 150px;
+    color: #f4f4f4;
+    background-color: #21252b;
+    border-radius: 20px;
+    border: hidden;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.input-wrapper > button:hover {
+    background-color: transparent;
+    color: #21252b;
+    letter-spacing: 2;
+    font-weight: 800;
+    text-transform: uppercase;
+
+}
+
+.right-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f2f2f2;
+    clip-path: polygon(20% 0, 100% 0, 100% 30%, 100% 70%, 100% 100%, 20% 100%, 0% 70%, 0% 30%);
+}
+
+.left-wrapper > img {
+    width: 100%;
+    height: 100%;
+    animation: heartbeat 2.5s ease-in-out infinite;
+
+}
+
+@keyframes heartbeat {
+    from {
+        transform: scale(1);
+        transform: center center;
+        animation-timing-function: ease-out;
+    }
+
+    10%{
+        transform: scale(0.9);
+        animation-timing-function: ease-in;
+    }
+    
+    20% {
+        transform: scale(0.98);
+        animation-timing-function: ease-out;
+    }
+    
+    30% {
+        transform: scale(0.87);
+        animation-timing-function: ease-in;
+    }
+
+    45% {
+        transform: scale(1);
+        animation-timing-function: ease-out;    
+    }
+
+}
+
+    /* mobile screen */
+
+@media screen and (max-width: 600px) {
+    .right-wrapper {
+        clip-path: polygon(50% 15%, 100% 0%, 100% 100%, 0 100%, 0 0);
+    }
+        
+    .social-media > a {
+        color: #f4f4f4;
+    }
+}
+
+@media screen and (max-width:890px) {
+    .left-wrapper > h1 {
+        font-size: 2.5rem;
+        letter-spacing: 2;
+
+    }
+    .left-wrapper > p {
+        font-size: 1rem;
+    }
+}
